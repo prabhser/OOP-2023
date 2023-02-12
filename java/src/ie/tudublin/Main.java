@@ -29,6 +29,10 @@ public class Main
 		penny.setName("Penny");
 		penny.speak();
 
+		Cat ginger = new Cat();
+		ginger.setName("Ginger");
+		ginger.kill(9);
+
 		loops();
 	}
 	
