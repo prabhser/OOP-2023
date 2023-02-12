@@ -33,7 +33,8 @@ public class Main
 		ginger.setName("Ginger");
 		ginger.kill(9);
 
-		loops();
+		//loops();
+		helloProcessing();
 	}
 	
 }
