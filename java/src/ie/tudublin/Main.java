@@ -20,6 +20,13 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new BugZap());
     }
+
+	public static void grid()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Grid());
+    }
+
 	
 	public static void main(String[] args)
 	{
@@ -29,7 +36,7 @@ public class Main
 		// penny.setName("Penny");
 		// penny.speak();
 
-		helloProcessing();;
+		grid();;
 		
 	}
 	
