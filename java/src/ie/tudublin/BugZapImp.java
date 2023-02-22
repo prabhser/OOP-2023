@@ -2,9 +2,9 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class BugZap2 extends PApplet {
+public class BugZapImp extends PApplet {
 	public void settings() {
-		size(300, 300);
+		size(500, 500);
 	}
 
 	public void setup() {
@@ -76,13 +76,13 @@ public class BugZap2 extends PApplet {
 		if (keyCode == LEFT) {
 			if (playerX > halfPlayerWidth) {
 				playerX -= playerSpeed;
-                playerX = playerX -1;
+                playerX = playerX - 1f;
 			}
 		}
 		if (keyCode == RIGHT) {
 			if (playerX < width - halfPlayerWidth) {
 				playerX += playerSpeed;
-                playerX = playerX +1;
+                playerX = playerX + 1f;
 			}
 		}
 		if (keyCode == ' ')

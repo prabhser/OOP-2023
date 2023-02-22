@@ -21,21 +21,16 @@ public class Main
         processing.core.PApplet.runSketch( a, new BugZap());
     }
 
-	public static void BugZap2()
+	public static void bugZapImp()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new BugZap2());
+        processing.core.PApplet.runSketch( a, new BugZapImp());
     }
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
-		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
-
-		BugZap2();
+		bugZapImp();
+		//bugZap();
 	}
 	
 }

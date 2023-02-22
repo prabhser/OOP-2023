@@ -4,14 +4,15 @@ import processing.core.PApplet;
 
 public class BugZap extends PApplet {
 	public void settings() {
-		size(1000, 1000);
+		size(500, 500);
 	}
 
 	public void setup() {
 		reset();
 	}
 
-	float playerX, playerY;
+	// float playerX, playerY;
+	float playerX = height/2, playerY = width/2;
 	float playerSpeed = 5;
 	float playerWidth = 40;
 	float halfPlayerWidth = playerWidth / 2;
@@ -76,11 +77,13 @@ public class BugZap extends PApplet {
 		if (keyCode == LEFT) {
 			if (playerX > halfPlayerWidth) {
 				playerX -= playerSpeed;
+				playerX = playerX -1;
 			}
 		}
 		if (keyCode == RIGHT) {
 			if (playerX < width - halfPlayerWidth) {
 				playerX += playerSpeed;
+				playerX = playerX +1;
 			}
 		}
 		if (keyCode == ' ')
