@@ -5,7 +5,7 @@ import processing.core.PApplet;
 public class Grid extends PApplet {
 
 	int mode = 0;
-	int sizeGrid = 14;
+	int sizeGrid = 19;
 	int sizeScreen = 800;
 
 	public void settings() {
@@ -31,6 +31,10 @@ public class Grid extends PApplet {
 			stroke(255);
 			line(lineGap*i, lineGap, lineGap*i, sizeScreen-lineGap);
 			line(lineGap, lineGap*i, sizeScreen-lineGap, lineGap*i);
+			int outNum = (int)((0-(sizeGrid+1)/2)+sizeGrid*i);
+			text(Integer.toString(outNum), (lineGap*i), 50f);
+			text(Integer.toString(outNum), 50f, (lineGap*i));
 		}
+		text("Hello", ((sizeScreen/2)), 50);
 	}
 }
