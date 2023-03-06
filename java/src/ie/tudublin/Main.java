@@ -26,6 +26,12 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Life());
     }
+
+	// public static void lifeBoard()
+	// {
+	// 	String[] a = {"MAIN"};
+    //     processing.core.PApplet.runSketch( a, new LifeBoard());
+    // }
 	
 	public static void main(String[] args)
 	{
