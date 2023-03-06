@@ -9,6 +9,47 @@ public class LifeBoard {
     PApplet p;
     float cellWidth;
 
+    public boolean getCell(int r, int c){
+        if (r>=0 && r < size && c>= 0 && c < size)
+            return board[r][c];
+        else
+            return false;
+    }
+
+    public int countCells(int r, int c){
+        int count = 0;
+        for (int i = -1; i < 1; i++) {
+            for (int j = -1; j < 1; j++) {
+                if (!(i == 0 )&& (j == 0)){
+                    if (getCell(i, j)){
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+    public void applyRules(){
+        int count = 0;
+        for (int r = 0; r < size; r++) {
+            for (int c = 0; c < size; c++) {
+                count = countCells(r, c);
+                if (board[r][c] == true){ // if cell is alive
+                    if (count == 2 || count == 3) // has 2 or 3 neighbours
+                        board[r][c] = true; // stays alive
+                    else
+                        board[r][c] = false; // dies
+                }
+
+                else{ // cell is dead
+                    if (count == 3) // has 3 neighbours
+                        board[r][c] = true; // revives
+                }
+            }
+        }
+    }
+
     public LifeBoard(int size, PApplet p){
         this.size = size;
         board = new boolean[size][size];
