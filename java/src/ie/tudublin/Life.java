@@ -5,6 +5,8 @@ import processing.core.PApplet;
 public class Life extends PApplet
 {
 
+	LifeBoard board;
+
 	public void settings()
 	{
 		size(500, 500);
@@ -13,7 +15,7 @@ public class Life extends PApplet
 	public void setup() {
 		colorMode(HSB);
 		background(0);
-		LifeBoard board = new LifeBoard(100, this);
+		board = new LifeBoard(100, this);
 		board.randomise();
 	}
 
