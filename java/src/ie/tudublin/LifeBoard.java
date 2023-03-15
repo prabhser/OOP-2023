@@ -70,14 +70,16 @@ public class LifeBoard {
     public void render(){
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < board.length; c++) { // randomises board so that some cells dead, alive
-                float x = c * cellWidth;
-                float y = r * cellWidth;
-                if (board[r][c] == true)
+                
+                float x = c * cellWidth, y = r * cellWidth; // for printing cell
+
+                if (board[r][c] == true) // translating array into print or no print
                     p.fill(0, 255, 0);
                 else
                     p.noFill();
 
-                p.rect(x, y, cellWidth, cellWidth);
+                p.rect(x, y, cellWidth, cellWidth); // drawing cell
+
                     //p.square(c*size, r*size, 1);;
             }
         }
