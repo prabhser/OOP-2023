@@ -4,11 +4,12 @@ import processing.core.PApplet;
 
 public class LifeBoard {
 
-    boolean[][] board;
-    private int size;
-    PApplet p;
-    float cellWidth;
+    boolean[][] board; // represents board of cells: true = alive, false = dead
+    private int size; // size of board
+    PApplet p; // used to call functions from PApplet
+    float cellWidth; // calculation of size of each cell
 
+    // gets value of cells
     public boolean getCell(int r, int c){
         if (r>=0 && r < size && c>= 0 && c < size)
             return board[r][c];
@@ -16,12 +17,12 @@ public class LifeBoard {
             return false;
     }
 
-    public int countCells(int r, int c){
+    public int countCells(int r, int c){ // counts neighbours of cell
         int count = 0;
         for (int i = -1; i < 1; i++) {
             for (int j = -1; j < 1; j++) {
                 if (!(i == 0 )&& (j == 0)){
-                    if (getCell(i, j)){
+                    if (getCell(i, j)){ // cell is alive
                         count++;
                     }
                 }
@@ -30,7 +31,7 @@ public class LifeBoard {
         return count;
     }
 
-    public void applyRules(){
+    public void applyRules(){ // rules of the game
         int count = 0;
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < size; c++) {
@@ -57,11 +58,11 @@ public class LifeBoard {
         cellWidth = p.width / (float) size;
     }
 
-    public void randomise(){
+    public void randomise(){ // initialises board to random boolean values
         for (int r = 0; r < size; r++) {
             for (int c = 0; c < board.length; c++) { // randomises board so that some cells dead, alive
                 float dice = p.random(0, 1);
-                board[r][c] = (dice <= 0.5f);
+                board[r][c] = (dice <= 0.5f); // rounded to nearest 1
             }
         }
     }
