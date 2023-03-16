@@ -85,12 +85,12 @@ public class LifeBoard {
         }
     }
 
-    // public getSize(){  
-    //     return size;
-    // }
+    public int getSize(){  
+        return size;
+    }
 
-    // public setSize(int size){
-
-    // }
+    public void setSize(int size){
+        this.size = size;
+    }
 
 }
