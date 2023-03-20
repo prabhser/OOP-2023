@@ -134,6 +134,6 @@ public class LifeBoard {
 
     public void setSize(int size) {
         this.size = size;
-    } 
+    }
     
 }
