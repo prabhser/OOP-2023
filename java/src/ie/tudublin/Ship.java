@@ -52,6 +52,11 @@ public class Ship {
         p.stroke(c, 255, 255);
     }
 
+    if (p.key == ' '){
+        Bullet b = new Bullet(pos.x, pos.y, rot, c, p);
+
+        ((YASC)p).bullets.add(b);
+    }
     
     
 }

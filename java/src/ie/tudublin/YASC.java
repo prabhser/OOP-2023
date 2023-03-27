@@ -1,11 +1,17 @@
 package ie.tudublin;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 
 public class YASC extends PApplet
 {
 
 	Ship ship;
+	Ship ship1;
+
+	//generic:
+	ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
 	public void settings()
 	{
@@ -22,6 +28,8 @@ public class YASC extends PApplet
 	
 	public void draw()
 	{	
+		background(0);
 		ship.render();
+		ship.move();
 	}
 }
