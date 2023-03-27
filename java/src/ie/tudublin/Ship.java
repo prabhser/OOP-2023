@@ -44,9 +44,12 @@ public class Ship {
     private float rot;
     private int c;
     private float size;
+    private boolean keyCode;
 
     public void render()
     {
+        p.rotate(rot);
+        p.stroke(c, 255, 255);
     }
 
     
